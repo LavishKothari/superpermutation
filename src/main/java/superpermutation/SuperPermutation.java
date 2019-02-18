@@ -10,6 +10,11 @@ import java.util.Map;
 public class SuperPermutation {
     private Map<String, Map<String, Integer>> graph;
 
+    /**
+     * constructs complete graph
+     * @param n
+     * @return
+     */
     public Map<String, Map<String, Integer>> constructGraph(int n) {
         Map<String, Map<String, Integer>> graph = new HashMap<>();
         String str = getStringOfLength(n);
@@ -43,8 +48,6 @@ public class SuperPermutation {
         return getCondensedString(a, b).length();
     }
 
-
-    @VisibleForTesting
     String getCondensedString(String a, String b) {
         if (a == null || a.length() == 0) {
             if (b == null) return "";
